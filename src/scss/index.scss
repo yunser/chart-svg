@@ -1,0 +1,424 @@
+.container {
+    width: 100%;
+}
+#svg2 {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 100000;
+    display: none;
+}
+.btn {
+    border-radius: 2px;
+}
+.form-horizontal .form-group {
+    margin-left: 0;
+    margin-right: 0;
+}
+/* TODO */
+.ui-color {
+    display: block;
+    float: left;
+    width: 25px;
+    height: 25px;
+    background-color: #f00;
+    border: 1px solid #999;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+/* 通用 */
+.layout-header {
+    height: 48px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+}
+.layout-left {
+    position: absolute;
+    top: 50px;/* TODO */
+    right: 0;
+    left: 0;
+    height: 48px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+}
+.layout-tool {
+    position: absolute;
+    top: 50px;/* TODO */
+    right: 0;
+    left: 0;
+    height: 48px;
+    padding: 8px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    h4 {
+        display: inline-block;
+        margin-right: 16px;
+        margin-left: 16px;
+    }
+}
+.layout-body {
+    position: absolute;
+    top: 98px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+/**/
+.shape-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 240px;
+    height: 100%;
+    background-color: #fff;
+    border-right: 1px solid #ccc;
+    overflow: auto;
+}
+/* 工作空间 */
+.workplace-box {
+    position: absolute;
+    top: 0;
+    right: 360px;
+    bottom: 0;
+    left: 240px;
+    overflow: auto;
+    canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .workplace {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1000px;
+        height: 1000px;
+        background-color: #f1f1f1;
+    }
+    .svg-box {
+        position: relative;
+        top: 80px;
+        left: 80px;
+        width: 700px;
+        height: 500px;
+        background-color: #fff;
+        border: 2px solid #09c;
+        overflow: hidden;
+    }
+    .svg {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        border: 1px solid #999;
+        overflow: hidden;
+    }
+    &.hover {
+        background-color: #09c;
+    }
+}
+/**/
+.col-6-12 {
+    width: 50%;
+}
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+/* 工具栏 */
+.edit-tool {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 360px;
+    background-color: #fff;
+    border-left: 1px solid #ccc;
+    .form-groups {
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 16px;
+    }
+    .title {
+        padding-left: 8px;
+        margin-bottom: 16px;
+        font-size: 16px;
+        border-left: 2px solid #09c;
+    }
+    .tip {
+        color: #999;
+    }
+    .hr {
+        width: 100%;
+        height: 1px;
+        margin: 16px 0;
+        background-color: #eee;
+    }
+    .tab-content {
+        position: absolute;
+        top: 40px;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 16px;
+        overflow: auto;
+    }
+    .form-group {
+        padding: 0px 0;
+        // TODO
+        &:before,
+        &:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    }
+    .control-label {
+        /*float: left;
+        width: 72px;
+        margin-right: 10%;
+        text-align: right;*/
+        text-align: left;
+    }
+    .form-control,
+    .minicolors {
+        /*position: relative;
+        float: left;
+        width: 100%;
+        max-width: 200px;*/
+    }
+    .minicolors .form-control {
+        width: 100%;
+    }
+    .btn {
+        margin-bottom: 8px;
+        /*float: left;
+        width: 40%;
+        margin-right: 10%;*/
+    }
+    .ui-color {
+        margin-top: 4px;
+        margin-right: 16px;
+    }
+    .edidtor-bg-display {
+        width: 100px;
+        height: 56px;
+        margin: 10px 0;
+        background-size: 100% 100%;
+        border: 1px solid #eee;
+    }
+}
+/* 颜色选择 */
+.color-list {
+    display: none;
+    overflow: auto;
+}
+.color-item {
+    float: left;
+    width: 30px;
+    height: 30px;
+    margin-right: 6px;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.color-item.active {
+    border-color: #09c;
+}
+
+/**/
+.save-demo {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #ccc;
+}
+
+.position {
+    position: fixed;
+    bottom: 15px;
+    left: 15px;
+    z-index: 1000;
+    color: #999;
+}
+/**/
+
+.elem-draggable {
+    /*cursor: move;*/
+}
+
+.cursor-line {
+    cursor: crosshair;
+}
+/**/
+.select-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, .5);
+}
+/**/
+.widget-list {
+    overflow: auto;
+    margin-bottom: 16px;
+    .widget-item {
+        position: relative;
+        float: left;
+        width: 40px;
+        height: 40px;
+        padding: 4px;
+        margin-right: 8px;
+        margin-bottom: 8px;
+        border: 1px solid #09c;
+        overflow: hidden;
+    }
+    .svg {
+        width: 100%;
+        height: 100%;
+    }
+    .name {
+        position: absolute;
+        display: none;
+        right: 8px;
+        bottom: 8px;
+    }
+}
+/**/
+.editor-box {
+    display: none;
+}
+.editor-base-box {
+    display: block;
+}
+/**/
+.input-box {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 100px;
+    height: 100px;
+    display: none;
+    background-color: #fff;
+    border: 1px dotted #09c;
+    z-index: 100;
+    overflow: hidden;
+    .input {
+        display: block;
+        border: none;
+        width: 100%;
+        outline: none;
+        padding: 8px;
+        text-align: center;
+    }
+}
+/**/
+.preview-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100000;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    .canvas {
+        display: block;
+        width: 700px;
+        height: 500px;
+        margin: 80px auto;
+        border: 1px solid #999;
+    }
+    .preview-close {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        color: #999;
+        font-size: 18px;
+    }
+}
+/**/
+.template-box {
+    width: 500px;
+}
+/**/
+#drag {
+    position: fixed;
+    left: 200px;
+    bottom: 0;
+    z-index: 10000;
+    display: none;
+    width: 80px;
+    height: 80px;
+    border: 1px dotted #09c;
+}
+/**/
+.thumbnail-box {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 16px;
+    border: 1px solid #09c;
+    background-color: #f1f1f1;
+    .thumbnail-viewbox {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 32px;
+        height: 32px;
+        background-color: rgba(0, 0, 0, .2);
+        border: 1px solid #999;
+        cursor: move;
+    }
+    .thumbnail-canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 64px;
+        height: 32px;
+        background-color: #fff;
+        border: 1px solid #09c;
+    }
+}
+/**/
+.new-dialog {
+    display: none;
+    width: 400px;
+}
+.resize-dialog {
+    display: none;
+    width: 400px;
+}
+/**/
+.widget-box {
+    position: fixed;
+    top: 50px;
+    left: 240px;
+    display: none;
+    width: 100px;
+    height: 100px;
+    padding: 8px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    .name {}
+}
+/**/
+.pen-tools {
+    display: none;
+}
+/**/
+.tip-box {
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: none;
+    padding: 8px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}

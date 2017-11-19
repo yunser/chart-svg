@@ -1,0 +1,50 @@
+/* reset */
+html {
+    height: 100%;
+}
+.btn-group > .btn:hover, .btn-group-vertical > .btn:hover, .btn-group > .btn:focus, .btn-group-vertical > .btn:focus, .btn-group > .btn:active, .btn-group-vertical > .btn:active, .btn-group > .btn.active, .btn-group-vertical > .btn.active {
+    z-index: 0;
+}
+.panel {
+    margin-bottom: 0;
+}
+body {
+    height: 100%;
+    background: #f1f1f1;
+    overflow: hidden;
+}
+.dropdown-context-menu {
+
+}
+.dropdown-menu > li > a {
+    /*padding: 8px 16px;*/
+    line-height: 1.2;
+}
+.dropdown-menu .divider {
+    margin: 4px 0;
+}
+.dropdown-menu .tip {
+    float: right;
+    color: #999;
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background-color: transparent;
+    /*border: 1px solid #ccc;*/
+}
+::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border: 1px solid #fff;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #999;
+}
+::-webkit-scrollbar-thumb:window-inactive {
+    background: #ccc;
+}

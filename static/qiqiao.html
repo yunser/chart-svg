@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>在线画板</title>
+    <meta name="keywords" content="画板,在线画板,在线绘画,在线画画,在线工具,在线工具大全,yunser">
+    <meta name="description" content="在线画板,在线绘画,在线画画,在线工具,yunser">
+    <link rel="stylesheet" href="asset/lib/eui/eui.min.css">
+    <link rel="stylesheet" href="asset/lib/eui/iconfont.css">
+    <link rel="stylesheet" href="asset/lib/minicolors/jquery.minicolors.css">
+    <link rel="stylesheet" href="asset/lib/colorpicker/css/bootstrap-colorpicker.min.css">
+    <link rel="stylesheet" href="asset/lib/svgjs-plugin/select/svg.select.css">
+    <link rel="stylesheet" href="asset/css/index.css">
+    <link rel="stylesheet" href="asset/css/qiqiao.css">
+</head>
+
+<body>
+<div class="h5-container">
+    <div class="workplace">
+        <svg id="svg" class="svg" viewBox="0 0 750 500" width="750" height="500" xmlns="http://www.w3.org/2000/svg" version="1.1">
+            <!--<pattern id="notes" x="20" y="20" width="50" height="25" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+                <rect width="20" height="20" style="fill:rgb(0,0,255);stroke-width:1;stroke:rgb(0,0,0)"/>
+            </pattern>
+            <path stroke="lightgrey" stroke-linecap="round" stroke-width="1" d="M0 0 L250 0 L250 250 L0 250 Z" />
+            <path style="fill:url(#notes)" stroke="lightgrey" stroke-linecap="round" stroke-width="1" d="M20 20 L200 20 L200 150 L20 150 Z" />
+            -->
+            <g id="SvgjsG1007">
+                <polygon points="118.47389221191406,-364.4578113555908 218.47389221191406,-264.4578113555908 118.47389221191406,-164.45781135559082" fill="#69bfd0" stroke="#000000" stroke-width="1" class="elem elem-draggable elem-rotateable" transform="matrix(2.220446049250313e-16,1,-1,2.220446049250313e-16,149.99999999999997,50.000000000000036)"></polygon>
+                <polygon points="-347.3895626068115,-67.26907539367676 -147.38956260681152,-67.26907539367676 -247.38956260681152,32.73092460632324" fill="#ccfe67" stroke="#000000" stroke-width="1" class="elem elem-draggable elem-rotateable" transform="matrix(-1,2.7755575615628914e-16,-2.7755575615628914e-16,-1,200,99.99999999999997)"></polygon>
+                <polygon id="flip-test" points="371.6867370605469,57.22891616821289 371.6867370605469,157.2289161682129 321.6867370605469,207.2289161682129 321.6867370605469,107.22891616821289" fill="#f33d65" stroke="#000000" stroke-width="1" class="elem elem-draggable elem-rotateable" transform="matrix(0.7071067811865476,0.7071067811865475,-0.7071067811865475,0.7071067811865476,195.04215762908746,-206.41558984622822)"></polygon>
+                <polygon points="-66.86747127771378,-68.47389656305313 -66.86747127771378,31.52610343694687 -116.86747127771378,-18.47389656305313" fill="#faf61b" stroke="#000000" stroke-width="1" class="elem elem-draggable elem-rotateable" transform="matrix(-1,2.7755575615628914e-16,-2.7755575615628914e-16,-1,250.00000000000003,199.99999999999997)"></polygon>
+                <polygon points="237.72962951660156,-164.10011386871338 287.72962951660156,-114.10011386871338 237.72962951660156,-64.10011386871338 187.72962951660156,-114.10011386871338" fill="#a594c0" stroke="#000000" stroke-width="1" class="elem elem-draggable elem-rotateable" transform="matrix(0.7071067811865476,0.7071067811865475,-0.7071067811865475,0.7071067811865476,135.35533905932738,-26.776695296636888)"></polygon>
+                <polygon points="366.26502990722656,220.2811279296875 416.26502990722656,270.2811279296875 316.26502990722656,270.2811279296875" fill="#f78fce" stroke="#000000" stroke-width="1" class="elem elem-draggable elem-rotateable"></polygon>
+                <polygon points="514.2570495605469,170.28111267089844 514.2570495605469,270.28111267089844 414.2570495605469,270.28111267089844" fill="#f6c928" stroke="#000000" stroke-width="1" class="elem elem-draggable elem-rotateable"></polygon>
+            </g>
+        </svg>
+    </div>
+
+</div>
+
+<footer></footer>
+<div class="db-tools">
+    <div class="btn-group">
+        <button id="clear" class="btn btn-default" type="button">清空</button>
+        <button id="restart" class="btn btn-default" type="button">标准七巧板</button>
+        <button id="modern-tangram" class="btn btn-default" type="button">现代七巧板</button>
+        <button id="tangram3" class="btn btn-default" type="button">等边七巧板</button>
+    </div>
+    <div class="title">操作</div>
+    <div id="type-list" class="btn-group">
+        <button id="select" class="btn btn-default active" type="button">选择工具</button>
+        <a id="drag-svg" class="btn btn-default">移动画布</a>
+    </div>
+    <div class="title">工具</div>
+    <div class="btn-group">
+        <button id="flip-x" class="btn btn-default" type="button">水平翻转</button>
+    </div>
+</div>
+<a class="more-tool" href="/" target="_blank">更多工具</a>
+<div class="description"></div>
+<div id="position" class="position">(0, 0)</div>
+
+<ul class="example-list">
+    <li class="example-item"><img class="example-img" src="asset/img/example1.jpg"> </li>
+    <li class="example-item"><img class="example-img" src="asset/img/example2.jpg"> </li>
+    <li class="example-item"><img class="example-img" src="asset/img/example3.jpg"> </li>
+    <li class="example-item"><img class="example-img" src="asset/img/example4.jpg"> </li>
+    <li class="example-item"><img class="example-img" src="asset/img/example5.jpg"> </li>
+    <li class="example-item"><img class="example-img" src="asset/img/example6.jpg"> </li>
+</ul>
+
+
+
+
+<script src="asset/lib/jquery/jquery-1.10.2.min.js"></script>
+<!--<script src="asset/lib/svgjs-plugin/svg-pan-zoom.js"></script>-->
+<script src="asset/lib/svgjs-plugin/svg.zoom.js"></script>
+
+<script src="asset/lib/eui/eui.min.js"></script>
+<script src="asset/lib/mousewheel/jquery.mousewheel.min.js"></script>
+<script src="asset/lib/svgjs/dist/svg.js"></script>
+
+<script src="asset/lib/svgjs-plugin/svg.draggy.js"></script>
+<script src="asset/lib/svgjs-plugin/select/svg.select.js"></script>
+<script src="asset/lib/svgjs-plugin/resize/svg.resize.js"></script>
+<script src="asset/lib/svgjs-plugin/draggable/dist/svg.draggable.min.js"></script>
+<script src="asset/lib/svgjs-plugin/draw/dist/svg.draw.min.js"></script>
+<script src="asset/lib/svgjs-plugin/svg.pan-zoom.js"></script>
+<script src="asset/lib/svgjs-plugin/zoomTo.js"></script>
+<script src="asset/lib/minicolors/jquery.minicolors.min.js"></script>
+<script src="asset/lib/colorpicker/js/bootstrap-colorpicker.min.js"></script>
+<script src="svg-editor.js"></script>
+<script src="asset/js/qiqiao.js"></script>
+</body>
+</html>

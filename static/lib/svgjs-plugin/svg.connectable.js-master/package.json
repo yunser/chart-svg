@@ -1,0 +1,42 @@
+{
+  "name": "svg.connectable.js",
+  "version": "2.0.0",
+  "description": "A JavaScript library for connecting SVG things.",
+  "main": "lib/index.js",
+  "scripts": {
+    "deploy": "cp -r example ../_tmp && git checkout gh-pages && cp -r ../_tmp/* . && git add . -A && git commit -m 'Rebuild.' && rm -rf ../_tmp ../_tmp.js"
+  },
+  "contributors": [
+    "Ionică Bizău <bizauionica@gmail.com>",
+    "https://github.com/eperry",
+    "@squeamish-ossifrage (https://github.com/squeamish-ossifrage)"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jillix/svg.connectable.js.git"
+  },
+  "keywords": [
+    "svg",
+    "connectable",
+    "js"
+  ],
+  "author": "jillix <contact@jillix.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jillix/svg.connectable.js/issues"
+  },
+  "homepage": "https://github.com/jillix/svg.connectable.js",
+  "directories": {
+    "example": "example"
+  },
+  "dependencies": {
+    "deffy": "^2.0.0",
+    "idy": "^1.0.0",
+    "iterate-object": "^1.1.0",
+    "set-or-get": "^1.0.0"
+  },
+  "devDependencies": {},
+  "blah": {
+    "ex_img": "http://i.imgur.com/VPZjM3v.png"
+  }
+}

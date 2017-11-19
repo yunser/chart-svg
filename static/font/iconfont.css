@@ -1,0 +1,104 @@
+
+@font-face {font-family: "draw-icon";
+  src: url('iconfont.eot?t=1494907383789'); /* IE9*/
+  src: url('iconfont.eot?t=1494907383789#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1494907383789') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1494907383789') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1494907383789#draw-icon') format('svg'); /* iOS 4.1- */
+}
+
+.draw-icon {
+  font-family:"draw-icon" !important;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.draw-icon-shanchu:before { content: "\e615"; }
+
+.draw-icon-cut:before { content: "\3434"; }
+
+.draw-icon-help:before { content: "\e610"; }
+
+.draw-icon-pointer:before { content: "\e612"; }
+
+.draw-icon-add2:before { content: "\e616"; }
+
+.draw-icon-fullscreen:before { content: "\e66b"; }
+
+.draw-icon-download:before { content: "\e60c"; }
+
+.draw-icon-arrow2:before { content: "\e613"; }
+
+.draw-icon-mousewheel:before { content: "\e697"; }
+
+.draw-icon-eye:before { content: "\e89a"; }
+
+.draw-icon-pen2:before { content: "\e600"; }
+
+.draw-icon-redo:before { content: "\e607"; }
+
+.draw-icon-undo:before { content: "\e608"; }
+
+.draw-icon-invisible:before { content: "\e625"; }
+
+.draw-icon-text:before { content: "\e646"; }
+
+.draw-icon-star:before { content: "\e623"; }
+
+.draw-icon-pencil:before { content: "\e601"; }
+
+.draw-icon-pen1:before { content: "\e64f"; }
+
+.draw-icon-save:before { content: "\e609"; }
+
+.draw-icon-merge:before { content: "\e689"; }
+
+.draw-icon-hand2:before { content: "\e86f"; }
+
+.draw-icon-hand:before { content: "\e60f"; }
+
+.draw-icon-rect:before { content: "\e602"; }
+
+.draw-icon-play:before { content: "\e60a"; }
+
+.draw-icon-magic:before { content: "\e62d"; }
+
+.draw-icon-polygon:before { content: "\e6a7"; }
+
+.draw-icon-pen3:before { content: "\e624"; }
+
+.draw-icon-no:before { content: "\e628"; }
+
+.draw-icon-visible:before { content: "\e67a"; }
+
+.draw-icon-area:before { content: "\e748"; }
+
+.draw-icon-arrow:before { content: "\e614"; }
+
+.draw-icon-line:before { content: "\e603"; }
+
+.draw-icon-bucket:before { content: "\e679"; }
+
+.draw-icon-buguize:before { content: "\e650"; }
+
+.draw-icon-eraser:before { content: "\e604"; }
+
+.draw-icon-pen:before { content: "\e611"; }
+
+.draw-icon-round:before { content: "\e605"; }
+
+.draw-icon-clear:before { content: "\e60b"; }
+
+.draw-icon-fullscreen2:before { content: "\e652"; }
+
+.draw-icon-meiyan:before { content: "\e606"; }
+
+.draw-icon-straw:before { content: "\e60d"; }
+
+.draw-icon-xiangpi:before { content: "\e60e"; }
+
+.draw-icon-ellipse:before { content: "\e61a"; }
+
+.draw-icon-eraser2:before { content: "\e747"; }
+
