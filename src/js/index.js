@@ -1,3 +1,6 @@
+import './editor'
+import './plugins'
+
 // var examples = $("svg").svgPanZoom({
 //     initialViewBox: {
 //         x: 0,

@@ -1,5 +1,8 @@
 /* reset */
-html {
+html,
+body,
+.app,
+.page {
     height: 100%;
 }
 .btn-group > .btn:hover, .btn-group-vertical > .btn:hover, .btn-group > .btn:focus, .btn-group-vertical > .btn:focus, .btn-group > .btn:active, .btn-group-vertical > .btn:active, .btn-group > .btn.active, .btn-group-vertical > .btn.active {
@@ -13,6 +16,16 @@ body {
     background: #f1f1f1;
     overflow: hidden;
 }
+
+.page-body {
+    position: absolute;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    overflow: auto;
+}
+
 .dropdown-context-menu {
 
 }

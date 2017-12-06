@@ -57,13 +57,15 @@
                                 帮助 <i class="caret"></i>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-right">
-                                <li><a href="help.html" target="_blank">帮助页面</a></li>
+                                <li><router-link to="/help" target="_blank">帮助页面</router-link></li>
+                                <!--<li><a href="help.html" target="_blank">帮助页面</a></li>-->
                                 <li><a href="/" target="_blank">更多工具</a></li>
                                 <li><a href="#" @click="about">关于</a></li>
                             </ul>
                         </li>
                         <li class="nav-item navbar-form">
                             <button id="quick-help" class="btn btn-info" href="#">快速导航</button>
+                            <button class="btn btn-info" href="#" @click.prevent="makeUseCase">生成用例图</button>
                         </li>
                     </ul>
                     <ul class="nav navbar-nav pull-right">
@@ -1236,6 +1238,9 @@ stop-opacity:1"/>
                         });
                     }
                 });
+            },
+            makeUseCase() {
+
             }
         }
     }

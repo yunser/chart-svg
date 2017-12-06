@@ -24,10 +24,10 @@
                 var rbox = that.rbox(elem);
                 //console.log(rbox);
                 /*that.hoverElem = that.tmpElem
-                    .rect(rbox.width, rbox.height)
-                    .move(rbox.x, rbox.y)
-                    .fill('none')
-                    .stroke('#000');*/
+                 .rect(rbox.width, rbox.height)
+                 .move(rbox.x, rbox.y)
+                 .fill('none')
+                 .stroke('#000');*/
                 var ctx = that.frontCanvas.getContext('2d');
                 ctx.clearRect(0, 0, that.width0, that.height0);
                 var rbox = that.rbox(elem);
@@ -51,9 +51,9 @@
             that.handlers[typeId] = {
                 elemClick: function (e, elem) {
                     /*var svgElem = SVG.adopt(elem);
-                    if (elem instanceof SVG.Text) {
-                        elem.move(0, 0);
-                    }*/
+                     if (elem instanceof SVG.Text) {
+                     elem.move(0, 0);
+                     }*/
 
                     if (e.altKey) {
                         // 按住 Shift 拖拽复制
@@ -139,7 +139,7 @@
                             that.pureUnselectize(elem);
                         }
                     });
-                                    }
+                }
             };
         }
     });
@@ -519,7 +519,7 @@
                         var vx = that.startViewbox.x - (x - that.dragX);
                         var vy =  that.startViewbox.y - (y - that.dragY);
                         that.svg.viewbox(vx, vy,
-                            that.startViewbox.width, that.startViewbox.height);
+                                that.startViewbox.width, that.startViewbox.height);
 
                         that.initBg();
                     }
@@ -676,9 +676,9 @@
     function bezierAt (C1, C2, C3, C4, t) {
         var t1 = 1 - t;
         return C1 * t1 * t1 * t1 +
-            C2 * 3 * t1 * t1 * t +
-            C3 * 3 * t1 * t * t +
-            C4 * t * t * t;
+                C2 * 3 * t1 * t1 * t +
+                C3 * 3 * t1 * t * t +
+                C4 * t * t * t;
     }
 
     // Get point at time t
@@ -704,7 +704,7 @@
         if ( ! divisions ) divisions = (this.__arcLengthDivisions) ? (this.__arcLengthDivisions): 200;
 
         if ( this.cacheArcLengths
-            && ( this.cacheArcLengths.length === divisions + 1 )) {
+                && ( this.cacheArcLengths.length === divisions + 1 )) {
             return this.cacheArcLengths;
         }
 
@@ -831,16 +831,16 @@
                 } else {
                     var prevPt = curve.points[i - 1];
                     that.curPath.C({x: prevPt.out.x, y: prevPt.out.y},
-                        {x: point.in.x, y: point.in.y},
-                        {x: point.pos.x, y: point.pos.y});
+                            {x: point.in.x, y: point.in.y},
+                            {x: point.pos.x, y: point.pos.y});
                 }
             }
             if (curve.isClose) {
                 var prevPt = curve.points[curve.points.length - 1];
                 var pt0 = curve.points[0];
                 that.curPath.C({x: prevPt.out.x, y: prevPt.out.y},
-                    {x: prevPt.in.x, y: prevPt.in.y},
-                    {x: prevPt.pos.x, y: prevPt.pos.y});
+                        {x: prevPt.in.x, y: prevPt.in.y},
+                        {x: prevPt.pos.x, y: prevPt.pos.y});
                 that.curPath.Z();
             }
             that.curPath.redraw();
@@ -973,13 +973,13 @@
                     });
                     /*if (i === arr.length - 1) {
 
-                    } else {
-                        curve.points.push({
-                            in: v2(pt[3], pt[4]),
-                            pos: v2(pt[5], pt[6]),
-                            out: v2(pt[1], pt[2])
-                        });
-                    }*/
+                     } else {
+                     curve.points.push({
+                     in: v2(pt[3], pt[4]),
+                     pos: v2(pt[5], pt[6]),
+                     out: v2(pt[1], pt[2])
+                     });
+                     }*/
                     break;
                 case 'S':
                 case 's':
@@ -1104,7 +1104,7 @@
                         clone.addClass('elem elem-resizable');
                         if (curve.isClose && !that.isDealPath) {
                             clone.fill(that.fill)
-                                .stroke({color: that.stroke, width: that.strokeWidth}); // TODO
+                                    .stroke({color: that.stroke, width: that.strokeWidth}); // TODO
 
                         } else {
 
@@ -1206,8 +1206,8 @@
                                 var mousePos = getMousePos2(x, y);
                                 for (var i = 0; i < draggingPts.length; i++) {
                                     /*var p = curve.points[draggingPts[i]];
-                                    p.out = mousePos;
-                                    p.in = v2.add(p.pos, v2.sub(p.pos, p.out));*/
+                                     p.out = mousePos;
+                                     p.in = v2.add(p.pos, v2.sub(p.pos, p.out));*/
 
                                     var point = curve.points[draggingPts[i]];
                                     var oldPos = point[draggingTypes[i]];
@@ -1263,7 +1263,7 @@
                                 /*for (var i = 0; i < draggingPts.length; i++) {
 
 
-                                }*/
+                                 }*/
                                 that.drawCanvas(curve);
                             } else {
                                 ui.msg('请针对路径的描点进行删除描点工具');
@@ -1350,7 +1350,7 @@
     var typeId = SVGEditor.getTypeId();
 
     var fn = SVGEditor.prototype;
-    
+
     fn.initLineJoin = function () {
         var that = this;
 
@@ -1470,7 +1470,7 @@
             var that = this;
 
             that.initLineJoin();
-            
+
             that.startJoin = false;
             that.curLine;
             that.lineX = 0;
@@ -1542,28 +1542,28 @@
                 if (e.shiftKey) {
                     // 直线
                     that.curLine = that.lineElem.line(that.lineX, that.lineY, that.lineX, that.lineY)
-                        .fill('#09f')
-                        .back().stroke({color: that.stroke, width: that.strokeWidth})
-                        .addClass('elem')
-                        .addClass('elem-joinable');
+                            .fill('#09f')
+                            .back().stroke({color: that.stroke, width: that.strokeWidth})
+                            .addClass('elem')
+                            .addClass('elem-joinable');
                     that.curLine.attr('stroke-dasharray', that.strokeDasharray); // 最后
                     that.curLine.attr('data-line', 'line');
                 } else if (e.altKey) {
                     // 折线
                     that.curLine = that.lineElem.path(polylinePath(that.lineX, that.lineY, that.lineX, that.lineY))
-                        .fill('none')
-                        .back().stroke({color: that.stroke, width: that.strokeWidth})
-                        .addClass('elem')
-                        .addClass('elem-joinable');
+                            .fill('none')
+                            .back().stroke({color: that.stroke, width: that.strokeWidth})
+                            .addClass('elem')
+                            .addClass('elem-joinable');
                     that.curLine.attr('stroke-dasharray', that.strokeDasharray); // 最后
                     that.curLine.attr('data-line', 'polyline');
                 } else {
                     // 曲线
                     that.curLine = that.lineElem.path(curvePath(that.lineX, that.lineY, that.lineX, that.lineY))
-                        .fill('none')
-                        .back().stroke({color: that.stroke, width: that.strokeWidth})
-                        .addClass('elem')
-                        .addClass('elem-joinable');
+                            .fill('none')
+                            .back().stroke({color: that.stroke, width: that.strokeWidth})
+                            .addClass('elem')
+                            .addClass('elem-joinable');
                     that.curLine.attr('stroke-dasharray', that.strokeDasharray); // 最后
                     that.curLine.attr('data-line', 'curve');
                 }
@@ -1703,15 +1703,15 @@
                     startX = x;
                     startY = y;
                     /*drawingElem = that.allElem.line(0, 0, 10, 10);
-                    that.styleElem(drawingElem);
-                    drawingElem.draw(e, {snapToGrid: 1});
-                    that.showTip();*/
+                     that.styleElem(drawingElem);
+                     drawingElem.draw(e, {snapToGrid: 1});
+                     that.showTip();*/
                 },
                 mousemove: function (x, y, e) {
                 },
                 mouseup: function (x, y, e) {
                     that.allElem.text('双击编辑文字').x(x).y(y)
-                        .addClass('elem');
+                            .addClass('elem');
                     that.usePlugin('select');
                 }
             };
